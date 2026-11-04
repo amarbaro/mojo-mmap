@@ -1,0 +1,3 @@
+src/mmap/mmap.mojo|Int32(1), fd, Int64(0)|Int32(2), fd, Int64(0)
+src/mmap/mmap.mojo|Int64(0), Int32(2)))|Int64(0), Int32(1)))
+src/mmap/mmap.mojo|var prot = 3 if write else 1|var prot = 1
