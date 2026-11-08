@@ -14,7 +14,7 @@ def _err(what: String, path: String) -> Error:
     """`mmap: <what> <path>: <strerror> (errno N)`, from the current errno."""
     var code = Int(external_call["__errno_location", Pointer[Int32, MutAnyOrigin]]()[])
     var p = external_call["strerror", Pointer[UInt8, MutAnyOrigin]](Int32(code))
-    var msg = StringSlice(unsafe_from_utf8=Span(unsafe_ptr=p, length=external_call["strlen", Int](p)))
+    var msg = String(unsafe_from_utf8=Span(unsafe_ptr=p, length=external_call["strlen", Int](p)))
     return Error("mmap: ", what, " ", path, ": ", msg, " (errno ", code, ")")
 
 
