@@ -9,3 +9,8 @@ dependencies = ["mojo>=1.2.0,<1.3"]
 [project.urls]
 Homepage = "https://github.com/amarbaro/mojo-mmap"
 Repository = "https://github.com/amarbaro/mojo-mmap"
+
+[dependency-groups]
+dev = [
+    "numpy>=2.4.6",
+]
