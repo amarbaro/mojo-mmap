@@ -1,0 +1,4 @@
+name = "mojo-mmap"
+version = "0.1.3"
+description = "Memory-mapped files for Mojo: zero-copy Span views, read and write, madvise, msync"
+tags = ["mojo", "mmap", "filesystem"]
